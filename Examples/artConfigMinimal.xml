@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<config xmlns="http://artifactory.jfrog.org/xsd/1.7.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.jfrog.org/xsd/artifactory-v1_7_1.xsd">
+    <offlineMode>false</offlineMode>
+    <helpLinksEnabled>true</helpLinksEnabled>
+    <fileUploadMaxSizeMb>100</fileUploadMaxSizeMb>
+    <dateFormat>yyyy-MM-dd HH:mm:ss z</dateFormat>
+    <addons>
+        <showAddonsInfo>true</showAddonsInfo>
+        <showAddonsInfoCookie>1460643847884</showAddonsInfoCookie>
+    </addons>
+    <bintrayConfig>
+        <fileUploadLimit>0</fileUploadLimit>
+    </bintrayConfig>
+    <security>
+        <anonAccessEnabled>true</anonAccessEnabled>
+        <anonAccessToBuildInfosDisabled>false</anonAccessToBuildInfosDisabled>
+        <hideUnauthorizedResources>false</hideUnauthorizedResources>
+        <passwordSettings>
+            <encryptionPolicy>supported</encryptionPolicy>
+            <expirationPolicy>
+                <enabled>false</enabled>
+                <passwordMaxAge>60</passwordMaxAge>
+                <notifyByEmail>true</notifyByEmail>
+            </expirationPolicy>
+        </passwordSettings>
+        <ldapSettings/>
+        <ldapGroupSettings/>
+        <userLockPolicy>
+            <enabled>false</enabled>
+            <loginAttempts>5</loginAttempts>
+        </userLockPolicy>
+    </security>
+    <backups>
+        <backup>
+            <key>backup-daily</key>
+            <enabled>true</enabled>
+            <cronExp>0 0 2 ? * MON-FRI</cronExp>
+            <retentionPeriodHours>0</retentionPeriodHours>
+            <createArchive>false</createArchive>
+            <excludedRepositories/>
+            <sendMailOnError>true</sendMailOnError>
+            <excludeBuilds>false</excludeBuilds>
+            <excludeNewRepositories>false</excludeNewRepositories>
+        </backup>
+        <backup>
+            <key>backup-weekly</key>
+            <enabled>false</enabled>
+            <cronExp>0 0 2 ? * SAT</cronExp>
+            <retentionPeriodHours>336</retentionPeriodHours>
+            <createArchive>false</createArchive>
+            <excludedRepositories/>
+            <sendMailOnError>true</sendMailOnError>
+            <excludeBuilds>false</excludeBuilds>
+            <excludeNewRepositories>false</excludeNewRepositories>
+        </backup>
+    </backups>
+    <indexer>
+        <enabled>false</enabled>
+        <cronExp>0 23 5 * * ?</cronExp>
+    </indexer>
+    <gcConfig>
+        <cronExp>0 0 /4 * * ?</cronExp>
+    </gcConfig>
+    <cleanupConfig>
+        <cronExp>0 12 5 * * ?</cronExp>
+    </cleanupConfig>
+    <virtualCacheCleanupConfig>
+        <cronExp>0 12 0 * * ?</cronExp>
+    </virtualCacheCleanupConfig>
+    <systemMessageConfig>
+        <enabled>false</enabled>
+        <titleColor>#429F46</titleColor>
+        <showOnAllPages>false</showOnAllPages>
+    </systemMessageConfig>
+    <folderDownloadConfig>
+        <enabled>false</enabled>
+        <maxDownloadSizeMb>1024</maxDownloadSizeMb>
+        <maxFiles>5000</maxFiles>
+        <maxConcurrentRequests>10</maxConcurrentRequests>
+    </folderDownloadConfig>
+    <trashcanConfig>
+        <enabled>true</enabled>
+        <allowPermDeletes>false</allowPermDeletes>
+        <retentionPeriodDays>14</retentionPeriodDays>
+    </trashcanConfig>
+</config>

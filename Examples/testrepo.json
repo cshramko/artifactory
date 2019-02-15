@@ -1,0 +1,23 @@
+{
+  "key": "testrepo",
+  "rclass" : "local",
+  "packageType": "maven",
+  "description": "testrepo description",
+  "notes": "testrepo notes",
+  "includesPattern": "**/*",
+  "excludesPattern": "",
+  "repoLayoutRef" : "maven-2-default",
+  "debianTrivialLayout" : false,
+  "checksumPolicyType": "client-checksums",
+  "handleReleases": true,
+  "handleSnapshots": true,
+  "maxUniqueSnapshots": 0,
+  "maxUniqueTags": 0,
+  "snapshotVersionBehavior": "non-unique",
+  "suppressPomConsistencyChecks": false,
+  "blackedOut": false,
+  "archiveBrowsingEnabled" : false,
+  "calculateYumMetadata" : false,
+  "yumRootDepth" : 0,
+  "dockerApiVersion" : "V2"
+}

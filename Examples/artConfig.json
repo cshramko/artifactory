@@ -1,0 +1,15 @@
+{
+    "artifactory": {
+        "baseURL": "https://artifactory.company.com/artifactory",
+        "username": "DMLAdmin",
+        "password": "DMLAdminPassword",
+        "info": "False",
+        "health": "True",
+        "configuration": "False"
+    },
+    "repos": {
+        "list": {
+            "type": "local"
+        }
+    }
+}

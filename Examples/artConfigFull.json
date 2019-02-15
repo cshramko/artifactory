@@ -1,0 +1,129 @@
+{
+    "destructive": false,
+    "safe": false,
+    "artifactory": {
+        "baseURL": "https://artifactory.company.com/artifactory",
+        "username": "DMLAdmin",
+        "password": "DMLAdminPassword",
+        "health": false,
+        "information": false,
+        "configuration": false
+    },
+    "license": {
+        "information": false,
+        "install": {
+            "licenseFile": "artLicense.json",
+            "license" : "HashedLicenseKey"
+        }
+    },
+    "users": {
+        "list": true,
+        "detail": ["admin", "DMLAdmin"],
+        "delete": ["testuser"],
+        "create": {
+            "testuser" : {
+                "email": "testuser@company.com",
+                "password": "testuser"
+            }
+        },
+        "createFromFile": [
+            "testuser.json"
+        ],
+        "update": {
+            "testuser" : {
+                "email": "testuser@company.com",
+                "password": "testuser"
+            }
+        },
+        "updateFromFile": [
+            "testuser.json"
+        ]
+    },
+    "groups": {
+        "list": true,
+        "detail": ["admins"],
+        "delete": ["testgroup"],
+        "create": {
+            "testgroup" : {
+                "description": "test group description"
+            }
+        },
+        "createFromFile": [
+            "testgroup.json"
+        ],
+        "update": {
+            "testuser" : {
+                "email": "testuser@company.com",
+                "password": "testuser"
+            }
+        },
+        "updateFromFile": [
+            "testuser.json"
+        ]
+    },
+    "repositories": {
+        "list": ["local","remote","virtual"],
+        "detail": ["default"],
+        "delete": ["testrepo"],
+        "create": {
+            "testlocalrepo": {
+                "rclass": "local",
+                "packageType": "maven",
+                "description": "",
+                "notes": "",
+                "propertySets": ["artifactory"],
+                "dockerApiVersion": "V1",
+                "snapshotVersionBehavior": "unique"
+            },
+            "testremoterepo": {
+                "rclass": "remote",
+                "packageType": "maven",
+                "description": "",
+                "notes": "",
+                "url" : "https://repository.company.com/repository",
+                "propertySets": ["artifactory"],
+                "dockerApiVersion": "V1",
+                "snapshotVersionBehavior": "unique"
+            }
+        },
+        "createFromFile": [
+            "testrepo.json"
+        ],
+        "update": {
+            "testrepo": {
+                "rclass": "local",
+                "packageType": "maven",
+                "description": "",
+                "notes": "",
+                "propertySets": ["artifactory"],
+                "dockerApiVersion": "V1",
+                "snapshotVersionBehavior": "unique"
+            }
+        },
+        "updateFromFile": [
+            "testuser.json"
+        ]
+    },
+    "permissions": {
+        "list": true,
+        "detail": ["Any Local"],
+        "delete": ["testpermission"],
+        "create": {
+            "testpermission": {
+                "repositories": ["testrepo"],
+                "principals": {
+                    "users": {
+                        "testuser": ["m","d","w","n","r"]
+                    },
+                    "groups": {
+                        "testgroup": ["m","d","w","n","r"],
+                        "readers" : ["r"]
+                    }
+                }
+            }
+        },
+        "createFromFile": [
+            "testpermission.json"
+        ]
+    }
+}

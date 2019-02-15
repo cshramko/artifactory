@@ -1,0 +1,13 @@
+{
+  "name": "testpermissions",
+  "repositories": ["testrepo"],
+  "principals": {
+      "users": {
+        "testuser": ["m","d","w","n","r"]
+      },
+      "groups": {
+        "testgroup": ["m","d","w","n","r"],
+        "readers" : ["r"]
+      }
+  }
+}
