@@ -11,3 +11,7 @@ A Python tool to call artifactoryAPI.py from the command line. Implements help a
 artifactorySetup.py
 
 A tool to cleanly configure an Artifactory installation according to the values in a JSON file.
+
+Examples
+
+Sample JSON input and XML output files.
